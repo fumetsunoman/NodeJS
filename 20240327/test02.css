@@ -1,0 +1,19 @@
+	.row{
+		display:flex;
+		width:180px;
+		background-color:pink;
+		&:nth-child(odd){
+			background-color: red;
+		}
+		.col{
+			width:60px;
+			height:30px;
+			display:grid;
+			place-items: center;
+			user-select:none;
+			cursor:pointer;
+			&.active{
+				background-color: aqua;
+			}
+		}
+	}
