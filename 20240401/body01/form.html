@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .d-flex{
+            display: flex;
+            /* justify-content: flex-end; */
+            & button{
+                margin-left: auto;  
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>登入頁面</h1>
+    <form action="/login" method="post">
+        <label for="account">帳號</label>
+        <input type="text" id="account" name="account"><br>
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password"><br>
+        <div class="d-flex">
+            <button class="ms-auto" type="submit">送出</button>
+        </div>
+    </form>
+</body>
+</html>

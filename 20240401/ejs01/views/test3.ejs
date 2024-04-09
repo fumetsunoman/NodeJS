@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <% if(user){ %>
+        <img src="<%=user.img%>"><span><%=user.name%></span>
+        <button class="btn btn-danger">登出</button>
+    <% }else{ %>
+        <form class="p-5" action="/login" method="post">
+            <input
+                placeholder="請填入帳號"
+                type="text" name="account" class="form-control">
+            <input
+                placeholder="請填入密碼"
+                type="password" name="password" class="form-control">
+            <button class="btn btn-primary me-3">登入</button><button class="btn btn-primary">註冊</button>
+        </form>
+    <% } %>
+    <script>
+        document.querySelector(".btn-danger").addEventListener("click", () => {
+            window.location.href = "/logout"; //導向登出的畫面
+        })
+    </script>
+</body>
+</html>
